@@ -1,0 +1,41 @@
+Spiral:
+
+Epoch 0: cost 1.098365
+Epoch 1000: cost 0.298095
+Epoch 2000: cost 0.251920
+Epoch 3000: cost 0.246956
+Epoch 4000: cost 0.245322
+Epoch 5000: cost 0.244414
+Epoch 6000: cost 0.243983
+Epoch 7000: cost 0.243814
+Epoch 8000: cost 0.243729
+Epoch 9000: cost 0.243628
+
+Accuracy: 98.667%.
+
+Flower:
+
+Epoch 0: cost 0.693136
+Epoch 1000: cost 0.638488
+Epoch 2000: cost 0.552219
+Epoch 3000: cost 0.448696
+Epoch 4000: cost 0.401192
+Epoch 5000: cost 0.381902
+Epoch 6000: cost 0.366975
+Epoch 7000: cost 0.351411
+Epoch 8000: cost 0.340066
+Epoch 9000: cost 0.333155
+Epoch 10000: cost 0.327534
+Epoch 11000: cost 0.324046
+Epoch 12000: cost 0.320712
+Epoch 13000: cost 0.318596
+Epoch 14000: cost 0.316999
+Epoch 15000: cost 0.315717
+Epoch 16000: cost 0.314701
+Epoch 17000: cost 0.313928
+Epoch 18000: cost 0.313318
+Epoch 19000: cost 0.312808
+
+Accuracy: 86.500%.
+
+
