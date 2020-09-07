@@ -1,0 +1,572 @@
+Model 1:
+
+********************* epoch 1 *********************
+the training took: 11(s)
+Accuracy of the trained model on test set is 0.9251
+********************* epoch 2 *********************
+the training took: 12(s)
+Accuracy of the trained model on test set is 0.9434
+********************* epoch 3 *********************
+the training took: 9(s)
+Accuracy of the trained model on test set is 0.9549
+********************* epoch 4 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9627
+********************* epoch 5 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9671
+********************* epoch 6 *********************
+the training took: 9(s)
+Accuracy of the trained model on test set is 0.9704
+********************* epoch 7 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9713
+********************* epoch 8 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9723
+********************* epoch 9 *********************
+the training took: 7(s)
+Accuracy of the trained model on test set is 0.9728
+********************* epoch 10 *********************
+the training took: 7(s)
+Accuracy of the trained model on test set is 0.9728
+********************* epoch 11 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9736
+********************* epoch 12 *********************
+the training took: 7(s)
+Accuracy of the trained model on test set is 0.9742
+********************* epoch 13 *********************
+the training took: 7(s)
+Accuracy of the trained model on test set is 0.975
+********************* epoch 14 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9754
+********************* epoch 15 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9755
+********************* epoch 16 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9759
+********************* epoch 17 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9765
+********************* epoch 18 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9762
+********************* epoch 19 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9768
+********************* epoch 20 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9767
+********************* epoch 21 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9767
+********************* epoch 22 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9769
+********************* epoch 23 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9772
+********************* epoch 24 *********************
+the training took: 7(s)
+Accuracy of the trained model on test set is 0.9773
+********************* epoch 25 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9773
+********************* epoch 26 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9776
+********************* epoch 27 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9778
+********************* epoch 28 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9779
+********************* epoch 29 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9781
+********************* epoch 30 *********************
+the training took: 8(s)
+Accuracy of the trained model on test set is 0.9783
+********************model 1********************
+accuracy is 0.978300
+
+Model 2:
+
+********************* epoch 1 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9753
+********************* epoch 2 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9815
+********************* epoch 3 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9842
+********************* epoch 4 *********************
+the training took: 21(s)
+Accuracy of the trained model on test set is 0.9855
+********************* epoch 5 *********************
+the training took: 21(s)
+Accuracy of the trained model on test set is 0.9861
+********************* epoch 6 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9866
+********************* epoch 7 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9872
+********************* epoch 8 *********************
+the training took: 23(s)
+Accuracy of the trained model on test set is 0.9881
+********************* epoch 9 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9884
+********************* epoch 10 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9888
+********************* epoch 11 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9887
+********************* epoch 12 *********************
+the training took: 17(s)
+Accuracy of the trained model on test set is 0.9893
+********************* epoch 13 *********************
+the training took: 17(s)
+Accuracy of the trained model on test set is 0.9895
+********************* epoch 14 *********************
+the training took: 17(s)
+Accuracy of the trained model on test set is 0.9895
+********************* epoch 15 *********************
+the training took: 19(s)
+Accuracy of the trained model on test set is 0.9897
+********************* epoch 16 *********************
+the training took: 18(s)
+Accuracy of the trained model on test set is 0.9897
+********************* epoch 17 *********************
+the training took: 17(s)
+Accuracy of the trained model on test set is 0.99
+********************* epoch 18 *********************
+the training took: 18(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 19 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.99
+********************* epoch 20 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.9898
+********************* epoch 21 *********************
+the training took: 19(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 22 *********************
+the training took: 22(s)
+Accuracy of the trained model on test set is 0.9904
+********************* epoch 23 *********************
+the training took: 23(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 24 *********************
+the training took: 19(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 25 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 26 *********************
+the training took: 19(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 27 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 28 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 29 *********************
+the training took: 19(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 30 *********************
+the training took: 20(s)
+Accuracy of the trained model on test set is 0.9901
+********************model 2********************
+accuracy is 0.990100
+
+Model 3:
+
+********************* epoch 1 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9759
+********************* epoch 2 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9864
+********************* epoch 3 *********************
+the training took: 54(s)
+Accuracy of the trained model on test set is 0.9869
+********************* epoch 4 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9888
+********************* epoch 5 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 6 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9892
+********************* epoch 7 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9897
+********************* epoch 8 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9903
+********************* epoch 9 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 10 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9906
+********************* epoch 11 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9919
+********************* epoch 12 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9921
+********************* epoch 13 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9923
+********************* epoch 14 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9923
+********************* epoch 15 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9925
+********************* epoch 16 *********************
+the training took: 54(s)
+Accuracy of the trained model on test set is 0.9924
+********************* epoch 17 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9924
+********************* epoch 18 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9923
+********************* epoch 19 *********************
+the training took: 54(s)
+Accuracy of the trained model on test set is 0.9924
+********************* epoch 20 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9924
+********************* epoch 21 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9925
+********************* epoch 22 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9926
+********************* epoch 23 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9926
+********************* epoch 24 *********************
+the training took: 52(s)
+Accuracy of the trained model on test set is 0.9927
+********************* epoch 25 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9926
+********************* epoch 26 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9923
+********************* epoch 27 *********************
+the training took: 55(s)
+Accuracy of the trained model on test set is 0.9926
+********************* epoch 28 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9928
+********************* epoch 29 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9927
+********************* epoch 30 *********************
+the training took: 53(s)
+Accuracy of the trained model on test set is 0.9927
+********************model 3********************
+accuracy is 0.992700
+
+Model 4:
+
+********************* epoch 1 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9748
+********************* epoch 2 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9839
+********************* epoch 3 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9864
+********************* epoch 4 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9869
+********************* epoch 5 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9876
+********************* epoch 6 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9863
+********************* epoch 7 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9871
+********************* epoch 8 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9896
+********************* epoch 9 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9868
+********************* epoch 10 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9869
+********************* epoch 11 *********************
+the training took: 62(s)
+Accuracy of the trained model on test set is 0.9888
+********************* epoch 12 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9852
+********************* epoch 13 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9876
+********************* epoch 14 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9864
+********************* epoch 15 *********************
+the training took: 48(s)
+Accuracy of the trained model on test set is 0.9873
+********************* epoch 16 *********************
+the training took: 48(s)
+Accuracy of the trained model on test set is 0.9876
+********************* epoch 17 *********************
+the training took: 48(s)
+Accuracy of the trained model on test set is 0.9897
+********************* epoch 18 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.989
+********************* epoch 19 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9893
+********************* epoch 20 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9904
+********************* epoch 21 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9907
+********************* epoch 22 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9914
+********************* epoch 23 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9895
+********************* epoch 24 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9901
+********************* epoch 25 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9905
+********************* epoch 26 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9902
+********************* epoch 27 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9898
+********************* epoch 28 *********************
+the training took: 49(s)
+Accuracy of the trained model on test set is 0.9889
+********************* epoch 29 *********************
+the training took: 50(s)
+Accuracy of the trained model on test set is 0.9916
+********************* epoch 30 *********************
+the training took: 51(s)
+Accuracy of the trained model on test set is 0.9915
+********************model 4********************
+accuracy is 0.991500
+
+Model 5:
+
+
+Model 6:
+
+********************* epoch 1 *********************
+the training took: 545(s)
+Accuracy of the trained model on test set is 0.9912
+********************* epoch 2 *********************
+the training took: 545(s)
+Accuracy of the trained model on test set is 0.9936
+********************* epoch 3 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9925
+********************* epoch 4 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9926
+********************* epoch 5 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9927
+********************* epoch 6 *********************
+the training took: 542(s)
+Accuracy of the trained model on test set is 0.9935
+********************* epoch 7 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9925
+********************* epoch 8 *********************
+the training took: 543(s)
+Accuracy of the trained model on test set is 0.993
+********************* epoch 9 *********************
+the training took: 544(s)
+Accuracy of the trained model on test set is 0.9939
+********************* epoch 10 *********************
+the training took: 542(s)
+Accuracy of the trained model on test set is 0.994
+********************* epoch 11 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.994
+********************* epoch 12 *********************
+the training took: 539(s)
+Accuracy of the trained model on test set is 0.9931
+********************* epoch 13 *********************
+the training took: 543(s)
+Accuracy of the trained model on test set is 0.9934
+********************* epoch 14 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9944
+********************* epoch 15 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9939
+********************* epoch 16 *********************
+the training took: 542(s)
+Accuracy of the trained model on test set is 0.9932
+********************* epoch 17 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9945
+********************* epoch 18 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9948
+********************* epoch 19 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9944
+********************* epoch 20 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9945
+********************* epoch 21 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9944
+********************* epoch 22 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9949
+********************* epoch 23 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9939
+********************* epoch 24 *********************
+the training took: 542(s)
+Accuracy of the trained model on test set is 0.9943
+********************* epoch 25 *********************
+the training took: 543(s)
+Accuracy of the trained model on test set is 0.9938
+********************* epoch 26 *********************
+the training took: 540(s)
+Accuracy of the trained model on test set is 0.9945
+********************* epoch 27 *********************
+the training took: 538(s)
+Accuracy of the trained model on test set is 0.9943
+********************* epoch 28 *********************
+the training took: 541(s)
+Accuracy of the trained model on test set is 0.9948
+********************* epoch 29 *********************
+the training took: 542(s)
+Accuracy of the trained model on test set is 0.9949
+********************* epoch 30 *********************
+the training took: 539(s)
+Accuracy of the trained model on test set is 0.995
+********************model 6********************
+accuracy is 0.995000
+
+Model 7:
+
+********************* epoch 1 *********************
+the training took: 620(s)
+Accuracy of the trained model on test set is 0.9894
+********************* epoch 2 *********************
+the training took: 632(s)
+Accuracy of the trained model on test set is 0.9914
+********************* epoch 3 *********************
+the training took: 625(s)
+Accuracy of the trained model on test set is 0.9938
+********************* epoch 4 *********************
+the training took: 617(s)
+Accuracy of the trained model on test set is 0.994
+********************* epoch 5 *********************
+the training took: 625(s)
+Accuracy of the trained model on test set is 0.9923
+********************* epoch 6 *********************
+the training took: 628(s)
+Accuracy of the trained model on test set is 0.9939
+********************* epoch 7 *********************
+the training took: 632(s)
+Accuracy of the trained model on test set is 0.9948
+********************* epoch 8 *********************
+the training took: 619(s)
+Accuracy of the trained model on test set is 0.9949
+********************* epoch 9 *********************
+the training took: 626(s)
+Accuracy of the trained model on test set is 0.9933
+********************* epoch 10 *********************
+the training took: 631(s)
+Accuracy of the trained model on test set is 0.9946
+********************* epoch 11 *********************
+the training took: 620(s)
+Accuracy of the trained model on test set is 0.9939
+********************* epoch 12 *********************
+the training took: 628(s)
+Accuracy of the trained model on test set is 0.9943
+********************* epoch 13 *********************
+the training took: 631(s)
+Accuracy of the trained model on test set is 0.9935
+********************* epoch 14 *********************
+the training took: 631(s)
+Accuracy of the trained model on test set is 0.9944
+********************* epoch 15 *********************
+the training took: 629(s)
+Accuracy of the trained model on test set is 0.9946
+********************* epoch 16 *********************
+the training took: 647(s)
+Accuracy of the trained model on test set is 0.9937
+********************* epoch 17 *********************
+the training took: 642(s)
+Accuracy of the trained model on test set is 0.9945
+********************* epoch 18 *********************
+the training took: 640(s)
+Accuracy of the trained model on test set is 0.9928
+********************* epoch 19 *********************
+the training took: 641(s)
+Accuracy of the trained model on test set is 0.9946
+********************* epoch 20 *********************
+the training took: 630(s)
+Accuracy of the trained model on test set is 0.9945
+********************* epoch 21 *********************
+the training took: 632(s)
+Accuracy of the trained model on test set is 0.9949
+********************* epoch 22 *********************
+the training took: 638(s)
+Accuracy of the trained model on test set is 0.9946
+********************* epoch 23 *********************
+the training took: 654(s)
+Accuracy of the trained model on test set is 0.9947
+********************* epoch 24 *********************
+the training took: 654(s)
+Accuracy of the trained model on test set is 0.9952
+********************* epoch 25 *********************
+the training took: 645(s)
+Accuracy of the trained model on test set is 0.9951
+********************* epoch 26 *********************
+the training took: 627(s)
+Accuracy of the trained model on test set is 0.9951
+********************* epoch 27 *********************
+the training took: 628(s)
+Accuracy of the trained model on test set is 0.9955
+********************* epoch 28 *********************
+the training took: 625(s)
+Accuracy of the trained model on test set is 0.9948
+********************* epoch 29 *********************
+the training took: 629(s)
+Accuracy of the trained model on test set is 0.9956
+********************* epoch 30 *********************
+the training took: 625(s)
+Accuracy of the trained model on test set is 0.9948
+********************model 7********************
+accuracy is 0.994800
