@@ -1,1 +1,1 @@
-Please view the 'autoencoder.pdf' file for assignment details.
+Please view the *autoencoder.pdf* file for project details.
