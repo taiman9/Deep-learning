@@ -1,1 +1,1 @@
-In this project, I implement the ConvNet for digit classification tasks. Please view the **Implementation** section in *Convolutional-nn.pdf* for project details and *Report.docx* for implementation results.
+In this project, I implement the ConvNet for digit classification using Pytorch. Please view the **Implementation** section in *Convolutional-nn.pdf* for project details and *Report.docx* for implementation results.
