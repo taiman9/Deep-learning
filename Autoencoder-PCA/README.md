@@ -1,1 +1,1 @@
-In this project, I implement two versions of sparse Autoencoders using Numpy and Pytorch respectively to evaluate natural images and MNIST digits. I also implement Principal Component Analysis. Please view the **Implementation section** *autoencoder-pca.pdf* file for project details. 
+In this project, I implement two versions of sparse Autoencoders using Numpy and Pytorch respectively to evaluate natural images and MNIST digits. I also implement Principal Component Analysis. Please view the **Implementation** section *autoencoder-pca.pdf* file for project details. 
