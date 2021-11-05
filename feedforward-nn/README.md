@@ -60,7 +60,7 @@ on all the training examples in X, plus an L2 regularization term weighted by th
 **3\. Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
 to compute to softmax outputs.
 
-**4\. **Predictions:** Compute model predictions in the cost() function.
+**4\. Predictions:** Compute model predictions in the cost() function.
 
 **5\. Vectorization:** It is important to vectorize your code so that it runs quickly.
 
