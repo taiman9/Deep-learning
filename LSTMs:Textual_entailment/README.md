@@ -1,4 +1,4 @@
-In this project, I process text data and then build,train and evaluate LSTM models to infer textual entailment between two text data using Pytorch. Please view the **Implementation** section in ``rnns_for_textual_entailment.pdf`` for project details. Instructions to run the program can be found in the ``README.txt`` file.  
+In this project, I implement 2 LSTM models with abd without attention to infer textual entailment between sentences pairs using Pytorch. Please view the **Implementation** section in ``rnns_for_textual_entailment.pdf`` for project details. Instructions to run the program can be found in the ``README.txt`` file.  
 
 ## Textual Entailment using RNNs
 
