@@ -31,7 +31,7 @@ The output of a convolutional layer for one example is a 3D tensor. To be used a
 
 **Step 2: One convolutional + one hidden layer:** Insert a convolutional layer at the beginning of the network, followed by a max-pooling layer and the fully connected layer from step 1. Use 5x5 local receptive fields, a stride of 1, and 20 kernels. The max-pooling layer should combine features using 2x2 pooling windows. The overall architecture should look as in the figure below.
 
-![](convnet.png)
+![](convnet.PNG)
 
 **Step 3: Two convolutional + one hidden layer:** Insert a second convolutional-pooling layer between the existing convolutional-pooling layer and the fully-connected hidden layer. Use a 5x5 local receptive field for 40 kernels and pool over 2x2 regions.
 
