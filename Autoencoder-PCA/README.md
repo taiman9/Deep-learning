@@ -55,6 +55,7 @@ normalized by calling *normalizeData()*.
 in **sparseAutoencoder.py** that computes the cost and the gradient. The cost and gra-
 
 dient should be computed according to the formulas shown on slides 5-9 in [this Lecture](http://ace.cs.ohio.edu/~razvan/courses/dl6890/lecture02a.pdf).
+
 Use the sigmoid as activation and output function.
 
 **3. Vectorization:** It is very important to vectorize your code so that it runs quickly.
