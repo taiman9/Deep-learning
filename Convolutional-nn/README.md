@@ -51,6 +51,6 @@ In train cnn.py, we have manually split the dataset into minibatches. Write code
 
 Implement all the above using NumPy. This requires updating backpropagation to go through convolutional and pooling layers. How to do this is explained in the [UFLDL Tutorial](http://ufldl.stanford.edu/wiki/index.php/Exercise:Convolution_and_Pooling). Alternatively, you can implement only forward propagation and the cost in NumPy and use autograd for the gradient computation.
 
-## Results
+## Obtain Results
 
 The screen output produced when running the **cnnExercise.py** code should be redirected to (saved into) the output.txt file.
