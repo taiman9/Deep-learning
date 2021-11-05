@@ -1,4 +1,4 @@
-# LSTM models with and without attention for textual entailment analysis using PyTorch
+# LSTM models with and without attention to infer textual entailment using PyTorch
 
 ## Description
 
