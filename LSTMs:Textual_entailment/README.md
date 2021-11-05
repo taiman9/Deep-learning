@@ -1,1 +1,208 @@
 In this project, I process text data and then build,train and evaluate LSTM models to infer textual entailment between two text data using Pytorch. Please view the **Implementation** section in ``rnns_for_textual_entailment.pdf`` for project details. Instructions to run the program can be found in the ``README.txt`` file.  
+
+## Textual Entailment using RNNs
+
+In this assignment, you will implement 2 LSTM models for textual entailment, with and without attention, based on the paper [Reasoning about entailment with neural attention](https://arxiv.org/pdf/1509.06664.pdf)[ ](https://arxiv.org/pdf/1509.06664.pdf),
+by Rocktaschel et al., ICLR 2016. It is important that you read this paper before starting work on the assignment. Model 3, in particular, uses the same notation as in the paper.
+
+Download the skeleton code from http://ace.cs.ohio.edu/~razvan/courses/dl6890/hw/hw05.zip.
+Follow the links on the course web site and 1) download the word embeddings that have been
+pre-trained using the word2vec package on the Google News corpus; 2) download the Stan-
+ford Natural Language Inference dataset. Put the two ﬁles in the snli folder.
+
+Implement the 2 textual entailment models, **Model_2** and **Model_3**, as explained below,
+using PyTorch. Make sure that you organize your code in folders as shown in the table below.
+
+<pre>
+dl6890/
+  hw05/
+    pytorch/
+      <b>train rnn.py</b>
+      rnnExercise.py
+      data set.py
+      README.txt
+      output.txt
+    snli/
+      embedding.pkl
+      snli padding.pkl
+</pre>
+
+Write code only in the file indicated in bold. The traces from running python3 rnnExercise.py
+\<mode> for the 3 models should be saved in **output.txt**. In each step you will train the
+corresponding architecture and report the accuracy on the test data. By default the code
+uses the GPU if *torch.cuda.is_available()* returns true, otherwise it uses the CPU. It
+is recommended you run the code on an architecture with GPU, otherwise it can be very slow. 
+It is also recommended that you read and understand the code in **rnnExercise.py** and **data_set.py**, 
+besides the skeleton code in **train_rnn.py**.
+
+Dataset: Run data set.py, which will create two ﬁles: 1) embedding.pkl containing em-
+
+beddings only for words that appear in the SNLI dataset; 2) snli padding.pkl containing
+
+the SNLI dataset wherein each sentence is a list of word IDs, padded with zeros up to the
+
+maximum sentence length.
+
+The pickled embeddings in embedding.pkl contain 3 ﬁelds:
+
+\1. word to id: a Python dictionary that contains words to id mapping.
+
+\2. id to word: a Python dictionary that contains id to words mapping.
+
+\3. vectors : a NumPy 2D array than contains the embeddings for all the words in SNLI.
+
+The ﬁrst row represents the embedding of the dummy word used for padding and is
+
+set to all zeros. The second row corresponds to the embedding of out of vocabulary
+
+(OOV) words. The rest of the vectors are for the words that exist in SNLI dataset.
+
+For each word, the row number is the word ID.
+
+In order to process sentences in minibatches, all sentences are padded with 0 up to a max-
+
+imum length and the true lengths of all the sentences are recorded for later use. Corre-
+
+spondingly, the SNLI dataset pickled in snli padding.pkl contains 3 arrays – train set,
+
+dev set, and test set – where each array is formed of 5 tensors: one tensor for the premise
+
+sentences, one tensor for the true lengths of the premise sentences, one tensor for the hypoth-
+
+esis sentences, one tensor for the true lengths of the hypothesis sentences, and one tensor for
+
+the labels of the sentence pairs (0 for entailment, 1 for neutral, 2 for contradiction).
+
+Model 1: Shared LSTM: This model trains one LSTM model to process both premise and
+
+hypothesis. When processing a sentence, for each word in the sentence, the LSTM uses the
+
+word embedding as input and will multiply it internally with a parameter matrix to obtain
+
+a projected vector that has the same dimensionality as the LSTM state. The LSTM output
+
+at the end of the sentence is used as the representation of the sentence. Since sentences are
+
+padded with dummy words to have the same length, the code has to determine the LSTM
+
+output corresponding to the true length of the sentence. The premise and hypothesis repre-
+
+sentations will be concatenated and used as input to a feed-forward network with 3 hidden
+
+layers and one softmax layer. For regularization, the code uses dropout with the provided
+
+dropout rate.
+
+Model 2: Conditional LSTM (100 points): This model is described in section 2.2.1 in
+
+the ICLR paper. It uses two LSTM networks, one for the premise, one for the hypothesis.
+
+The cell state of the hypothesis LSTM is initialized with the value of the last cell state of
+
+the premise LSTM. The last output of the hypothesis LSTM is used as the representation of
+
+the sentence pair and fed as input to a feed-forward network with 3 hidden layers and one
+
+softmax layer. For regularization, use dropout with the provided dropout rate.
+
+Model 3: Conditional LSTM with Attention (100 points): This LSTM model is
+
+described in section 2.3 in the ICLR paper. It is like Model 2 above, but it also uses an
+
+
+
+
+
+attention mechanism, where the attention weights are computed between the last output of
+
+the hypothesis LSTM and all the outputs of the premise LTSM. Since sentences are padded
+
+with dummy words, a mask vector is computed for each premise sentence to indicate which
+
+words truly belong to the sentence and thus can be used when computing attention weights.
+
+The context vector computed with attention weights together with the last output of the hy-
+
+pothesis LSTM are linearly combined and passed through a tanh nonlinearity, as explained
+
+in the paper. The result is then used as the representation of the sentence pair and fed as
+
+input to a feed-forward network with 3 hidden layers and one softmax layer. For regulariza-
+
+tion, use dropout with the provided dropout rate.
+
+For your convenience, complete code for Model 1 is provided in train .py. You can
+
+reuse this code for the other two models, or you can create your own implementation. For
+
+both Model 2 and Model 3, you only have to write the forward propagation code.
+
+2.1 Relevant PyTorch functionality
+
+• torch.nn.Module: All 3 models need to be derived from this class.
+
+• torch.nn.Parameter: When you deﬁne model parameters manually, as is thecase for
+
+the attention model parameters in Model 3, they need to be deﬁned as torch.nn.Parameter,
+
+otherwise the corresponding variables will not be registered into the module, and hence
+
+they will not be trained.
+
+• torch.nn.LSTM, torch.nn.LSTMCell: This are the PyTorch classes implementing
+
+LSTM’s and LSTMCell’s. You will need to use LSTMCell to implement the premise
+
+LSTM in Models 2 and 3, in order to be able to access the LSTM output for the actual
+
+last token in the sentence when the sentence is padded with dummy words. Examples
+
+of using LSTMCell are given in the [documentation](http://pytorch.org/docs/master/nn.html)[ ](http://pytorch.org/docs/master/nn.html)and this [Time](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)[ ](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)[Series](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)[ ](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)[Prediction](https://github.com/pytorch/examples/tree/master/time_sequence_prediction)
+
+example.
+
+• torch.nn.functional.dropout(), torch.nn.Linear: To apply dropout and imple-
+
+ment linear layers.
+
+• torch.repeat , torch.expand: Try to use these functions when you need to replicate
+
+a tensor over some dimension. The diﬀerence between torch.repeat and torch.expand
+
+is that torch.expand does not allocate memory for the extended elements.
+
+The PyTorch tutorial on [Machine](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[Translation](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[with](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[a](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[Sequence](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[to](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[Sequence](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[Network](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[and](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[ ](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)[Attention](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)
+
+is very relevant for this assignment, so it is recommended that you read it before you start
+
+writing code. Read also the documentation for the [torch.nn.LSTM](http://pytorch.org/docs/master/nn.html)[ ](http://pytorch.org/docs/master/nn.html)[module](http://pytorch.org/docs/master/nn.html).
+
+For bonus points, you can try other conﬁgurations in order to get better results, such as a
+
+diﬀerent number of fully connected layers between the LSTM and the softmax layer, diﬀerent
+
+locations for inserting dropout layers, diﬀerent activation functions for the fully connected
+
+layers, and other initialization schemes for the the manually created variables. You may also
+
+want to experiment with padding at the beginning instead at the end, and using the output
+
+from the last dummy token in the premise instead of the output from the actual last word
+
+in the premise.
+
+
+
+
+
+3 Submission
+
+Turn in a hard copy of your homework report at the beginning of class on the due date.
+
+Electronically submit on Blackboard a hw05.zip ﬁle that contains the hw05 folder in which
+
+you change code only in the required ﬁles. The screen output produced when running
+
+the rnnExercise.py code should be redirected to (saved into) the output.txt ﬁle. Do not
+
+attempt to submit the snli data folder on Blackboard!
