@@ -1,5 +1,6 @@
 # Convolutional neural networks for digit classification using PyTorch
 
+## Decription
 In this project, I implement the ConvNet for digit classification using PyTorch. Implementation details are given below and can also be found in the *Implementation* section in the **Convolutional-nn.pdf** file. Please view the **Report.docx** file for implementation results.
 
 ## 1. Theory
