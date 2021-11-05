@@ -104,11 +104,11 @@ the parameters W<sub>1</sub>, b<sub>1</sub> for the hidden layer, and W<sub>2</s
 
 weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub> use the [Glorot uniform initializer](http://pytorch.org/docs/master/_modules/torch/nn/init.html)
 
-, also called Xavier uniform initializer. It draws samples from a uniform distribution within [−limit, limit] where limit is 
+, also called Xavier uniform initializer. It draws samples from a uniform distribution within [−limit, limit] 
 
-<span>&#8730;</span>(6/(fan<sub>in</sub> + fan<sub>out</sub>)) where fan<sub>in</sub> is the number of input units in the weight tensor a
+where limit is <span>&#8730;</span>(6/(fan<sub>in</sub> + fan<sub>out</sub>)) where fan<sub>in</sub> is the number of input units in the 
 
-and fan<sub>out</sub> is the number  of output units in the weight tensor.
+weight tensor and fan<sub>out</sub> is the number  of output units in the weight tensor.
 
 **2.** *cost()* should compute and return the cost of the sparse autoencoder on the input
 
@@ -166,29 +166,25 @@ ply them to image patches taken from natural images. The only ﬁle you need to 
 
 **Step 0a: Load data:** The starter code contains code to load a set of natural images and
 
-sample 12x12 patches from them. The raw patches will look something like in Figure [5(a).](#br7)
+sample 12x12 patches from them. The raw patches will look something like in [Figure 5(a)](images/Figure5.png)
 
 These patches are stored as column vectors in the 144 x 10,000 array x.
 
-Step 0b: Zero mean the data: First, for each image patch, compute the mean pixel value
+**Step 0b: Zero mean the data:** First, for each image patch, compute the mean pixel value
 
 and subtract it from that image, this centering the image around zero. You should compute
 
 a diﬀerent mean value for each image patch.
 
+![](images/Figure4.png)
 
-
-
-
-Figure 4: (a) PCA Whitening; (b) ZCA Whitening.
-
-Step 1a: Implement PCA: In this step, you will implement PCA to obtain xRot, the
+**Step 1a: Implement PCA:** In this step, you will implement PCA to obtain xRot, the
 
 matrix in which the data is ”rotated” to the basis comprising the principal components.
 
 Note that in this part of the exercise, you should not whiten the data.
 
-Step 1b: Check covariance: To verify that your implementation of PCA is correct, you
+**Step 1b: Check covariance:** To verify that your implementation of PCA is correct, you
 
 should check the covariance matrix for the rotated data xrot. PCA guarantees that the
 
@@ -198,15 +194,15 @@ only along the main diagonal). Implement code to compute the covariance matrix a
 
 this property. One way to do this is to compute the covariance matrix, and visualise it using
 
-the SciPy function misc.imsave(). The image should show a white diagonal line against a
+the SciPy function *misc.imsave()*. The image should show a white diagonal line against a
 
 dark background. For this dataset, because of the range of the diagonal entries, the diagonal
 
-line may not be apparent, but this trick of visualizing using imsave() will come in handy
+line may not be apparent, but this trick of visualizing using *imsave()* will come in handy
 
 later in this exercise.
 
-Step 2: Find number of components to retain: Next, choose k, the number of prin-
+**Step 2: Find number of components to retain:** Next, choose k, the number of prin-
 
 cipal components to retain. Pick k to be as small as possible, but so that at least 99% of
 
@@ -216,7 +212,7 @@ components, reducing the dimension of the original data to k. Write down the val
 
 your report.
 
-Step 3: PCA with dimensionality reduction: Now that you have found k, compute x˜,
+**Step 3: PCA with dimensionality reduction:** Now that you have found k, compute ~x,
 
 the reduced-dimension representation of the data. This gives you a representation of each
 
