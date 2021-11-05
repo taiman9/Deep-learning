@@ -52,7 +52,7 @@ normalized by calling normalizeData().
 
 **2. Cost & Gradient:** You will need to write code for the function sparseAutoencoderCost()
 
-in sparseAutoencoder.py that computes the cost and the gradient. The cost and gra-
+in **sparseAutoencoder.py** that computes the cost and the gradient. The cost and gra-
 
 dient should be computed according to the formulas shown on slides 5-9 in [this Lecture](http://ace.cs.ohio.edu/~razvan/courses/dl6890/lecture02a.pdf).
 Use the sigmoid as activation and output function.
@@ -61,13 +61,13 @@ Use the sigmoid as activation and output function.
 
 **4. Gradient checking:** Once you implemented the cost and the gradient in sparseAutoencoderCost()
 
-verify that your gradient code is correct by running the sparseAutoencoderExercise.py
+verify that your gradient code is correct by running the **sparseAutoencoderExercise.py**
 
-in –debug mode. This will use the computeNumericalGradient.py code that you wrote
+in *–debug* mode. This will use the **computeNumericalGradient.py** code that you wrote
 
-for the ﬁrst assignment. The norm of the diﬀerence between the numerical gradient
+for the ﬁrst assignment. The norm of the difference between the numerical gradient
 
-and your analytical gradient should be small, less than 10−9.
+and your analytical gradient should be small, less than 10<sup>−9</sup>.
 
 \5. Feature learning: Training the autoencoder is done using L-BFGS for 400 epochs,
 
