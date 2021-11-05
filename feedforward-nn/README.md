@@ -24,61 +24,51 @@ returns a cache with the A and Z values for the hidden and output layers.
     hw02/
       code/
         numpy/
-          <b>
-          nn1Layer.py
+          <b>nn1Layer.py
           computeNumericalGradient.py
-          output.txt
-          </b>
+          output.txt</b>
           nn1LayerExercise.py
           utils.py
           flower-boundary.jpg
           spiral-boundary.jpg
         pytorch/
-          <b>
-          nn1Layer.py
+          <b>nn1Layer.py
           nn1LayerExercise.py
-          output.txt
-          </b>
+          output.txt</b>
           utils.py
           flower-boundary.jpg
           spiral-boundary.jpg
         pytorch.nn/
-          <b>
-          nn1LayerExercise.py
-          output.txt
-          </b>
+          <b>nn1LayerExercise.py
+          output.txt</b>
           utils.py
           flower-boundary.jpg
           spiral-boundary.jpg
         p3/
-          <b>
-          p3.py
-          output.txt
-          </b>
+          <b>p3.py
+          output.txt</b>
         p5/
-          <b>
-          p5.py
+          <b>p5.py
           computeNumericalGradient.py
-          output.txt
-          </b>
+          output.txt</b>
 </pre>
 
-**Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
+1. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
 on all the training examples in X, plus an L2 regularization term weighted by the decay hyper-parameter.
 
-**Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
+2.**Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
 to compute to softmax outputs.
 
-**Predictions:** Compute model predictions in the cost() function.
+3. **Predictions:** Compute model predictions in the cost() function.
 
-**Vectorization:** It is important to vectorize your code so that it runs quickly.
+4. **Vectorization:** It is important to vectorize your code so that it runs quickly.
 
-**Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
+5. **Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
 
-**Numerical gradient:** Once you implemented the cost and the gradient in nn1Layer.py,
+6. **Numerical gradient:** Once you implemented the cost and the gradient in nn1Layer.py,
 implement code for computing the gradient numerically in computeNumericalGradient.py.
 
-**Gradient checking:** Use computeNumericalGradient.py to make sure that your
+7. **Gradient checking:** Use computeNumericalGradient.py to make sure that your
 backward() function is computing gradients correctly. This is done by running the
 main program in Debug mode, i.e. python3 nn1LayerExercise.py --debug.
 
@@ -95,12 +85,12 @@ should be small, on the order of 10−^9.
 
 You will need to write code for the following:
 
-**Cost:** Compute the cost = average negative log-likelihood + L2 regularization term.
+1. **Cost:** Compute the cost = average negative log-likelihood + L2 regularization term.
 Compute the cost yourself, i.e. do not use specialized PyTorch functions. In particular,
 do not use functions from PyTorch (e.g. from the torch.nn module) that compute the
 cross entropy loss.
 
-**Predictions:** Use the trained model to compute labels for the training examples.
+2. **Predictions:** Use the trained model to compute labels for the training examples.
 Use the NumPy array representation of the parameters, as created for you before the
 nn1Layer.predict() call.
 
@@ -108,13 +98,13 @@ nn1Layer.predict() call.
 
 You will need to write code for the following:
 
-**Model, Loss, Optimizer:** Define the model to be a NN with one hidden ReLU
+1. **Model, Loss, Optimizer:** Define the model to be a NN with one hidden ReLU
 layer and linear outputs. You may want to use the torch.nn.Sequential container.
 Define the loss function to compute the cross-entropy – see loss functions defined in
 the pytorch.nn module. Define the optimizer to run SGD with the specified learning
 rate and weight decay.
 
-**Gradient descent loop:** Write code for running gradient descent for num_epochs.
+2. **Gradient descent loop:** Write code for running gradient descent for num_epochs.
 At each epoch, you will compute the model predictions using the model above, com-
 pute the loss between predictions and true labels using the loss function above, print
 the loss every 1000 epochs, zero de gradients through the optimizer object, then run
