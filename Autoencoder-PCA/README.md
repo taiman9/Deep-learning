@@ -34,23 +34,23 @@ into a jpg ﬁle **figure_xx.jpg**. The ﬁrst part of the exercise should gener
 
 **1. Sampling images:** The training data for the autoencoder will be created from random
 
-natural or digit images. For digit images, write code in the function sampleDigitImages()
+natural or digit images. For digit images, write code in the function *sampleDigitImages()*
 
 that returns 20,000 random 28x28 images from the entire MNIST dataset (training
 
 and testing). The images should be distinct. For natural images, write code in
 
-sampleNaturalImages() that returns 10,000 random 8x8 patches from the set of 10
+*sampleNaturalImages()* that returns 10,000 random 8x8 patches from the set of 10
 
 512x512 natural images stored in images.mat. These images have been whitened, so
 
 the pixel values are not necessarily in \[0,1]. Consequently, the pixel values are further
 
-normalized by calling normalizeData().
+normalized by calling *normalizeData()*.
 
 ![](images/Figure1.png)
 
-**2. Cost & Gradient:** You will need to write code for the function sparseAutoencoderCost()
+**2. Cost & Gradient:** You will need to write code for the function *sparseAutoencoderCost()*
 
 in **sparseAutoencoder.py** that computes the cost and the gradient. The cost and gra-
 
@@ -59,7 +59,7 @@ Use the sigmoid as activation and output function.
 
 **3. Vectorization:** It is very important to vectorize your code so that it runs quickly.
 
-**4. Gradient checking:** Once you implemented the cost and the gradient in sparseAutoencoderCost()
+**4. Gradient checking:** Once you implemented the cost and the gradient in *sparseAutoencoderCost()*
 
 verify that your gradient code is correct by running the **sparseAutoencoderExercise.py**
 
@@ -69,9 +69,9 @@ for the ﬁrst assignment. The norm of the difference between the numerical grad
 
 and your analytical gradient should be small, less than 10<sup>−9</sup>.
 
-\5. Feature learning: Training the autoencoder is done using L-BFGS for 400 epochs,
+**5. Feature learning:** Training the autoencoder is done using L-BFGS for 400 epochs,
 
-through the SciPy function [scipy.optimize.fmin](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[ ](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[l](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[ ](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[bfgs](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[ ](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[b().](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)[ ](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_l_bfgs_b.html)If completely vectorized,
+through the SciPy function [scipy.optimize.fmin_l_bfgs_b()]. If completely vectorized,
 
 training the model on 20,000 random samples from the entire MNIST dataset should
 
@@ -81,63 +81,33 @@ natural images should be much faster, due to the smaller number of samples and
 
 parameters.
 
-\6. Visualization: To vizualize a learned feature, the code computes an input image that
+**6. Visualization:** To vizualize a learned feature, the code computes an input image that
 
 would maximally activate the corresponding hidden neuron. This is done using the
 
-formula in a previous theory question, as implemented in the displayNetwork() func-
+formula in a previous theory question, as implemented in the *displayNetwork()* func-
 
-tion. The learned features should be similar to the ones shown in Figure [1:](#br3)[ ](#br3)for natural
+tion. The learned features should be similar to the ones shown in Figure [1]: for natural
 
 images they should resemble Gabor edges, whereas for digits they should resemble pen
 
 strokes.
 
-2.2 Sparse AE: PyTorch Implementation (50 points)
+### 2.2 Sparse AE: PyTorch Implementation 
 
-Coding eﬀort: my implementation has 5 + 10 lines of code in sparseAutoencoder.py.
+You will need to write code in **sparseAutoencoder.py**, in functions *get_vars()* and *cost()*:
 
-You will need to write code in sparseAutoencoder.py, in functions get vars() and cost():
+1. *get_vars()* should create, initialize, and return variables for the data matrix X and
 
+the parameters W<sub>1</sub>, b<sub>1</sub> for the hidden layer, and W<sub>2</sub>, b<sub>2</sub> for the output layer. The bias
 
+weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub> use the [Glorot uniform initializer](http://pytorch.org/docs/master/_modules/torch/nn/init.html)
 
+, also called Xavier uniform initializer. It draws samples from a uniform distribution within [−limit, limit] where limit is 
 
+(6/(fan + fan )) where fan<sub>in</sub> is the number of input units in the weight tensor and fan<sub>out</sub> is the number 
 
-\1. get vars() should create, initialize, and return variables for the data matrix X and
-
-the parameters W , b for the hidden layer, and W , b for the output layer. The bias
-
-1
-
-weights should be initialized with 0, whereas for W and W use the [Glorot](http://pytorch.org/docs/master/_modules/torch/nn/init.html)[ ](http://pytorch.org/docs/master/_modules/torch/nn/init.html)[uniform](http://pytorch.org/docs/master/_modules/torch/nn/init.html)
-
-1
-
-2
-
-2
-
-1
-
-[initializer](http://pytorch.org/docs/master/_modules/torch/nn/init.html)[ ](http://pytorch.org/docs/master/_modules/torch/nn/init.html), also called Xavier uniform initializer. It draws samples from a uniform
-
-2
-
-p
-
-distribution within [−limit, limit] where limit is (6/(fan + fan )) where fan
-
-out
-
-units in the weight tensor.
-
-in
-
-is the number of input units in the weight tensor and fan is the number of output
-
-out
-
-in
+of output units in the weight tensor.
 
 \2. cost() should compute and return the cost of the sparse autoencoder on the input
 
