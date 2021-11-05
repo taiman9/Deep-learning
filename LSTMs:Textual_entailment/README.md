@@ -1,4 +1,8 @@
-In this project, I implement 2 LSTM models with abd without attention to infer textual entailment between sentences pairs using Pytorch. Please view the **Implementation** section in ``rnns_for_textual_entailment.pdf`` for project details. Instructions to run the program can be found in the ``README.txt`` file.  
+# LSTM models with and without attention to infer textual entailment using PyTorch
+
+## Description
+
+In this project, I implement 2 LSTM models with and without attention to infer textual entailment between sentences pairs (with 0 for entailment, 1 for neutral, or 2 for contradiction) using Pytorch. Implementation details are given below and can also be found in the **rnns_for_textual_entailment.pdf** file. Instructions to run the project can be found in the **README.txt** file. The SNLI data folder is not included in this directory as it is too large, so please obtain it separately if needed.  
 
 ## Textual Entailment using RNNs
 
