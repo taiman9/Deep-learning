@@ -98,7 +98,7 @@ strokes.
 
 You will need to write code in **sparseAutoencoder.py**, in functions *get_vars()* and *cost()*:
 
-/1. *get_vars()* should create, initialize, and return variables for the data matrix X and
+**1.** *get_vars()* should create, initialize, and return variables for the data matrix X and
 
 the parameters W<sub>1</sub>, b<sub>1</sub> for the hidden layer, and W<sub>2</sub>, b<sub>2</sub> for the output layer. The bias
 
@@ -110,7 +110,7 @@ weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub
 
 and fan<sub>out</sub> is the number  of output units in the weight tensor.
 
-/2. *cost()* should compute and return the cost of the sparse autoencoder on the input
+**2.** *cost()* should compute and return the cost of the sparse autoencoder on the input
 
 data matrix X, by running forward propagation to compute the data cost and adding
 
@@ -132,61 +132,39 @@ The only ﬁle you need to modify is **pca 2d.py**. Implementing this exercise w
 
 to understand and complete.
 
-**Step 0:** Load data: The starter code contains code to load 45 2D data points. When
+**Step 0: Load data:** The starter code contains code to load 45 2D data points. When
 
 plotted using the scatter function, the results should look like in Figure [2(a)](images/Figure3.png).
 
-Step 1: Implement PCA: In this step, you will implement PCA to obtain xRot, the
+**Step 1: Implement PCA:** In this step, you will implement PCA to obtain xRot, thematrix in which the data 
 
-matrix in which the data is ”rotated” to the basis made up of the principal components.
+is ”rotated” to the basis made up of the principal components. You should make use of NumPy’s *svd()* function here.
 
-You should make use of NumPy’s svd() function here.
+**Step 1a: Finding the PCA basis:** Find *u<sub>1</sub>* and *u<sub>2</sub>*, and draw two lines in your ﬁgure
 
-Step 1a: Finding the PCA basis: Find u and u , and draw two lines in your ﬁgure
-
-1
-
-2
-
-to show the resulting basis on top of the given data points. Your ﬁgure should look like in
+to show the resulting basis on top of the given data points. Your ﬁgure should look like in [Figure 2(b)](images/Figure3.png).
 
 ![figure3](images/Figure3.png)
 
-Step 1b: Check xRot: Compute xRot, and use the NumPy scatter() function to check
+**Step 1b: Check xRot:** Compute xRot, and use the NumPy *scatter()* function to check
 
-that xRot looks as it should, which should be something like in Figure [3(a).](#br5)
+that xRot looks as it should, which should be something like in [Figure 3(a)](images/Figure3.png)
 
-Step 2: Dimensionality reduction: In the next step, set k, the number of components
+**Step 2: Dimensionality reduction:** In the next step, set k, the number of components
 
-to retain, to be 1. Compute the resulting xHat and plot the results, as in Figure [3(b).](#br5)
+to retain, to be 1. Compute the resulting xHat and plot the results, as in [Figure 3(b)](images/Figure3.png)
 
-Step 3: PCA Whitening: Implement PCA whitening using the formula from Lecture 3.
+**Step 3: PCA Whitening:** Implement PCA whitening. Plot xPCAWhite, and verify that it looks like in [Figure 4(a)](images/Figure4.png)
 
-Plot xPCAWhite, and verify that it looks like in Figure [4(a).](#br6)
+**Step 4: ZCA Whitening:** Implement ZCA whitening and plot the results. The results should look like in [Figure 4(b](images/Figure4.png).
 
-
-
-
-
-Figure 2: (a) Raw data; (b) Raw data and PCA basis.
-
-Figure 3: (a) Data rotated through PCA; (b) One-dimensional projection.
-
-Step 4: ZCA Whitening: Implement ZCA whitening and plot the results. The results
-
-should look like in Figure [4(b](#br6)).
-
-2.4 PCA and Whitening on natural images (50 points)
-
-Coding eﬀort: my implementation has 19 lines of code.
+### 2.4 PCA and Whitening on natural images
 
 In this exercise, you will implement PCA, PCA whitening and ZCA whitening, and ap-
 
-ply them to image patches taken from natural images. The only ﬁle you need to modify is
+ply them to image patches taken from natural images. The only ﬁle you need to modify is **pca image.py**.
 
-pca image.py.
-
-Step 0a: Load data: The starter code contains code to load a set of natural images and
+**Step 0a: Load data:** The starter code contains code to load a set of natural images and
 
 sample 12x12 patches from them. The raw patches will look something like in Figure [5(a).](#br7)
 
