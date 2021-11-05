@@ -1,15 +1,15 @@
 # Feed-forward neural network using NumPy and PyTorch for non-linear classification tasks
 
 In this project, I implement 3 versions of a neural network with one hidden layer and a softmax output layer
-using (1) NumPy, (2) PyTorch with autograd, and (3) PyTorch with the torch.nn and
-torch.optim modules. I evaluate the 3 implementations on the same two 2D non-linear classification tasks. Implementation details are given below and can also be viewed in the **Implementation** section in the *feedforward-nn.pdf* file.
+using (1) NumPy, (2) PyTorch with *autograd*, and (3) PyTorch with the *torch.nn* and
+*torch.optim* modules. I evaluate the 3 implementations on the same two 2D non-linear classification tasks. Implementation details are given below and can also be viewed in the *Implementation* section in the **feedforward-nn.pdf** file.
 
 # Implementation 
 Implement 3 versions of a neural network with one hidden layer and a softmax output layer,
-using (1)NumPy, (2)PyTorch with autograd, and (3) PyTorch with the torch.nn and
-torch.optim modules. Evaluate the 3 implementations on the same two 2D non-linear clas-
+using (1) NumPy, (2) PyTorch with *autograd*, and (3) PyTorch with the *torch.nn* and
+*torch.optim* modules. Evaluate the 3 implementations on the same two 2D non-linear clas-
 sification tasks: flower and spiral. Starter code and functions for generating the datasets
-are available athttp://ace.cs.ohio.edu/~razvan/courses/dl6890/hw/hw02.zip. The
+are available at http://ace.cs.ohio.edu/~razvan/courses/dl6890/hw/hw02.zip. The
 provided code also displays and saves images of the datasets and the trained model’s deci-
 sion boundaries. Make sure that you organize your code in folders as shown in the table
 below. Write code only in the Python files indicated in bold.
@@ -19,6 +19,7 @@ Forward Propagation: You will need to write code for the forward() function,
 which computes and returns the softmax outputs in A3. Use ReLU on the hidden
 layer, and also use a separate bias vector for the softmax layer. The function also
 returns a cache with the A and Z values for the hidden and output layers.
+
 <pre>
   dl6890/
     hw02/
@@ -65,12 +66,12 @@ to compute to softmax outputs.
 
 5. **Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
 
-6. **Numerical gradient:** Once you implemented the cost and the gradient in nn1Layer.py,
-implement code for computing the gradient numerically in computeNumericalGradient.py.
+6. **Numerical gradient:** Once you implemented the cost and the gradient in **nn1Layer.py**,
+implement code for computing the gradient numerically in **computeNumericalGradient.py**.
 
-7. **Gradient checking:** Use computeNumericalGradient.py to make sure that your
+7. **Gradient checking:** Use **computeNumericalGradient.py** to make sure that your
 backward() function is computing gradients correctly. This is done by running the
-main program in Debug mode, i.e. python3 nn1LayerExercise.py --debug.
+main program in Debug mode, i.e. `python3 nn1LayerExercise.py --debug`.
 
 (a) When doing gradient checking on a network that uses ReLU, the numerical gra-
 dient is likely to be very different from the analytical gradient. Explain why.
@@ -79,7 +80,7 @@ dient is likely to be very different from the analytical gradient. Explain why.
 (e.g. sigmoid) that is differentiable.
 
 The norm of the difference between the numerical gradient and your analytical gradient
-should be small, on the order of 10−^9.
+should be small, on the order of 10<sup>−9</sup>.
 
 ## PyTorch Implementation
 
@@ -87,21 +88,21 @@ You will need to write code for the following:
 
 1. **Cost:** Compute the cost = average negative log-likelihood + L2 regularization term.
 Compute the cost yourself, i.e. do not use specialized PyTorch functions. In particular,
-do not use functions from PyTorch (e.g. from the torch.nn module) that compute the
+do not use functions from PyTorch (e.g. from the *torch.nn* module) that compute the
 cross entropy loss.
 
 2. **Predictions:** Use the trained model to compute labels for the training examples.
 Use the NumPy array representation of the parameters, as created for you before the
-nn1Layer.predict() call.
+*nn1Layer.predict()* call.
 
 ## PyTorch.NN Implementation
 
 You will need to write code for the following:
 
 1. **Model, Loss, Optimizer:** Define the model to be a NN with one hidden ReLU
-layer and linear outputs. You may want to use the torch.nn.Sequential container.
+layer and linear outputs. You may want to use the *torch.nn.Sequential* container.
 Define the loss function to compute the cross-entropy – see loss functions defined in
-the pytorch.nn module. Define the optimizer to run SGD with the specified learning
+the *pytorch.nn* module. Define the optimizer to run SGD with the specified learning
 rate and weight decay.
 
 2. **Gradient descent loop:** Write code for running gradient descent for num_epochs.
@@ -115,10 +116,10 @@ backpropagation on the loss object.
 ## Theory Verification 
 
 1. Verify experimentally only the positive conclusions that you reached for theory problem 3
-(in *feedforward-nn.pdf*). Write your code in NumPy, PyTorch withautograd, or PyTorch with 
-torch.nn and torch.optim.
+(in **feedforward-nn.pdf**). Write your code in NumPy, PyTorch with *autograd*, or PyTorch with 
+*torch.nn* and *torch.optim*.
 
-2. Implement in NumPy the gradient formula that you derived for problem 5 (in *feedforward-nn.pdf*). 
+2. Implement in NumPy the gradient formula that you derived for problem 5 (in **feedforward-nn.pdf**). 
 Set all the variables to random values. Check the value of the analytical gradient against the
 numerical gradient and the gradient computed through autograd in PyTorch.
 
@@ -127,6 +128,6 @@ numerical gradient and the gradient computed through autograd in PyTorch.
 Modify the data generation functions to create examples that have only two labels and write a
 second version of the assignment that implements logistic regression for binary classification.
 
-## Results
+## Obtain Results
 The screen output produced when running the code should be redirected to (saved into) the 
 output.txt files.
