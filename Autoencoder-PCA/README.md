@@ -212,7 +212,7 @@ components, reducing the dimension of the original data to k. Write down the val
 
 your report.
 
-**Step 3: PCA with dimensionality reduction:** Now that you have found k, compute ![](images/xhat.png),
+**Step 3: PCA with dimensionality reduction:** Now that you have found k, compute ![xhat](images/xhat.png),
 
 the reduced-dimension representation of the data. This gives you a representation of each
 
