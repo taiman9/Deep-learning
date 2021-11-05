@@ -8,7 +8,7 @@ In this project, I implement the ConvNet for digit classification using PyTorch.
 
 ## 2. Implementation 
 
-Download the skeleton code from http://ace.cs.ohio.edu/~razvan/courses/dl6890/hw/hw04.zip. Implement the ConvNet for digit classication, as explained in the 7 steps below, using PyTorch. Make sure that you organize your code in folders as shown in the table below. P.S.- MNIST data used in this project is not provided in this directory, so please obtain it separately if needed.
+Download the skeleton code from http://ace.cs.ohio.edu/~razvan/courses/dl6890/hw/hw04.zip. Implement the ConvNet for digit classication, as explained in the 7 steps below, using PyTorch. Make sure that you organize your code in folders as shown in the table below. P.S.- MNIST dataset used in this project is not provided in this directory, so please obtain it separately if needed.
 
 <pre>
 dl6890/
@@ -54,4 +54,4 @@ Implement all the above using NumPy. This requires updating backpropagation to g
 
 ## Obtain Results
 
-The screen output produced when running the **cnnExercise.py** code should be redirected to (saved into) the output.txt file.
+The screen output produced when running the **cnnExercise.py** code should be redirected to (saved into) the **output.txt** file.
