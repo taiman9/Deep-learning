@@ -15,7 +15,7 @@ sion boundaries. Make sure that you organize your code in folders as shown in th
 below. Write code only in the Python files indicated in bold.
 
 ## NumPy Implementation
-1. **Forward Propagation:** You will need to write code for the forward() function,
+/1. **Forward Propagation:** You will need to write code for the forward() function,
 which computes and returns the softmax outputs in A3. Use ReLU on the hidden
 layer, and also use a separate bias vector for the softmax layer. The function also
 returns a cache with the A and Z values for the hidden and output layers.
@@ -54,7 +54,7 @@ returns a cache with the A and Z values for the hidden and output layers.
           output.txt</b>
 </pre>
 
-2. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
+/2. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
 on all the training examples in X, plus an L2 regularization term weighted by the decay hyper-parameter.
 
 3. **Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
