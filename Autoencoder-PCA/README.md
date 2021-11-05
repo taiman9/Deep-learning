@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project, I implement two versions of sparse Autoencoders using Numpy and Pytorch respectively to evaluate natural images and MNIST digits. I also implement Principal Component Analysis. Please view the **Implementation** section in the *autoencoder-pca.pdf* file for project details and the *Report.pdf* file for implementation results.
+In this project, I implement two versions of sparse Autoencoders using Numpy and Pytorch respectively to evaluate natural images and MNIST digits. I also implement Principal Component Analysis. Implementation details are given below and can also be found in the *Implementation* section in the **autoencoder-pca.pdf** file. Please view the *Report.pdf* file for implementation results.
 
 ## Implementation 
 
@@ -222,75 +222,56 @@ a sparse autoencoder or other algorithm on this reduced-dimensional data, it wil
 
 than if you were training on the original 144 dimensional data.
 
-To see the eﬀect of dimensionality reduction, go back from x˜ to produce the matrix
+To see the effect of dimensionality reduction, go back from ![xhat](images/xhat.png) to produce the matrix
 
-xˆ, the dimension-reduced data but expressed in the original 144 dimensional space of image
+![xtop](images/xtop.png), the dimension-reduced data but expressed in the original 144 dimensional space of image
 
-patches. Visualise xˆ and compare it to the raw data, x, as shown in Figure [5.](#br7)[ ](#br7)You will observe
+patches. Visualise ![xtop](images/xtop.png) and compare it to the raw data, *x*, as shown in [Figure 5](images/Figure5.png). 
 
-that there is little loss due to throwing away the principal components that correspond to
+You will observe that there is little loss due to throwing away the principal components that correspond to
 
 dimensions with low variation. For comparison, you may also wish to generate and visualise
 
-xˆ for when only 90% of the variance is retained.
+![xtop](images/xtop.png) for when only 90% of the variance is retained.
 
-Step 4a: Implement PCA with whitening and regularization: Now implement PCA
+![](images/Figure5.png)
 
+**Step 4a: Implement PCA with whitening and regularization:** Now implement PCA with whitening and regularization 
 
+to produce the matrix xPCAWhite. Use epsilon = 0.1.
 
+**Step 4b: Check covariance:** Similar to using PCA alone, PCA with whitening also results in processed data that 
 
+has a diagonal covariance matrix. However, unlike PCA alone, whitening additionally ensures that the diagonal entries 
 
-Figure 5: (a) Raw patches; (b) PCA projected images, 99% variance.
+are equal to 1, i.e. that the covariance matrix is the identity matrix. That would be the case if you were doing whitening alone 
 
-with whitening and regularization to produce the matrix xPCAWhite. Use epsilon = 0.1.
+with no regularization. However, in this case you are whitening with regularization, to avoid numerical problems as-
 
-Step 4b: Check covariance: Similar to using PCA alone, PCA with whitening also
+sociated with small eigenvalues. As a result of this, some of the diagonal entries of the covariance of your xPCAwhite 
 
-results in processed data that has a diagonal covariance matrix. However, unlike PCA
+will be smaller than 1. To verify that your implementation of PCA whitening with and without regularization is correct, 
 
-alone, whitening additionally ensures that the diagonal entries are equal to 1, i.e. that the
+you can check these properties. Implement code to compute the covariance matrix and verify this property. As earlier, you
 
-covariance matrix is the identity matrix.
+can visualise the covariance matrix with the SciPy function *misc.imsave()*.
 
-That would be the case if you were doing whitening alone with no regularization. How-
+**Step 5: ZCA whitening:** Now implement ZCA whitening to produce the matrix xZ-
 
-ever, in this case you are whitening with regularization, to avoid numerical problems as-
+CAWhite. Visualize xZCAWhite and compare it to the raw data, x, as shown in [Figure 6](images/Figure6.png)
 
-sociated with small eigenvalues. As a result of this, some of the diagonal entries of the
+You should observe that whitening results in, among other things, enhanced edges. Try repeating this with 
 
-covariance of your xPCAwhite will be smaller than 1. To verify that your implementation of
+epsilon set to 1, 0.1, and 0.01, and see what you obtain. The example in [Figure 6](images/Figure6.png) was obtained with epsilon = 0.1.
 
-PCA whitening with and without regularization is correct, you can check these properties.
+![](images/Figure6.png)
 
-Implement code to compute the covariance matrix and verify this property. As earlier, you
+## Obtain Results
 
-can visualise the covariance matrix with the SciPy function misc.imsave().
+The screen output produced when running the **sparseAutoencoderExercise.py** code should be redirected to 
 
-Step 5: ZCA whitening: Now implement ZCA whitening to produce the matrix xZ-
+(saved into) the corresponding **output-.txt** ﬁles.
 
-CAWhite. Visualize xZCAWhite and compare it to the raw data, x, as shown in Figure [6.](#br8)
-
-You should observe that whitening results in, among other things, enhanced edges. Try
-
-repeating this with epsilon set to 1, 0.1, and 0.01, and see what you obtain. The example in
-
-Figure [6](#br8)[ ](#br8)was obtained with epsilon = 0.1.
-
-3 Submission
-
-Turn in a hard copy of your homework report at the beginning of class on the due date.
-
-Electronically submit on Blackboard a hw03.zip ﬁle that contains the hw03 folder in which
-
-you change code only in the required ﬁles. The screen output produced when running the
-
-sparseAutoencoderExercise.py code should be redirected to (saved into) the corresponding
-
-output-.txt ﬁles.
-
-On a Linux system, creating the archive can be done using the command:
-
-\> zip -r hw03.zip hw03.
 
 
 
