@@ -56,7 +56,7 @@ returns a cache with the A and Z values for the hidden and output layers.
 1. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
 on all the training examples in X, plus an L2 regularization term weighted by the decay hyper-parameter.
 
-2.**Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
+2. **Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
 to compute to softmax outputs.
 
 3. **Predictions:** Compute model predictions in the cost() function.
@@ -127,5 +127,6 @@ numerical gradient and the gradient computed through autograd in PyTorch.
 Modify the data generation functions to create examples that have only two labels and write a
 second version of the assignment that implements logistic regression for binary classification.
 
+## Results
 The screen output produced when running the code should be redirected to (saved into) the 
 output.txt files.
