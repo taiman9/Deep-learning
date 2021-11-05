@@ -271,10 +271,3 @@ epsilon set to 1, 0.1, and 0.01, and see what you obtain. The example in [Figure
 The screen output produced when running the **sparseAutoencoderExercise.py** code should be redirected to 
 
 (saved into) the corresponding **output-.txt** ﬁles.
-
-
-
-
-
-
-Figure 6: (a) Raw patches; (b) ZCA whitened images.
