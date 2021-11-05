@@ -2,7 +2,7 @@
 ## Description
 In this project, I implement 3 versions of a neural network with one hidden layer and a softmax output layer
 using (1) NumPy, (2) PyTorch with *autograd*, and (3) PyTorch with the *torch.nn* and
-*torch.optim* modules. I evaluate the 3 implementations on the same two 2D non-linear classification tasks. Implementation details are given below and can also be viewed in the *Implementation* section in the **feedforward-nn.pdf** file.
+*torch.optim* modules. I evaluate the 3 implementations on the same two 2D non-linear classification tasks. Implementation details are given below and can also be viewed in the **feedforward-nn.pdf** file.
 
 ## Implementation 
 Implement 3 versions of a neural network with one hidden layer and a softmax output layer,
@@ -15,7 +15,7 @@ sion boundaries. Make sure that you organize your code in folders as shown in th
 below. Write code only in the Python files indicated in bold.
 
 ## NumPy Implementation
-Forward Propagation: You will need to write code for the forward() function,
+1. **Forward Propagation:** You will need to write code for the forward() function,
 which computes and returns the softmax outputs in A3. Use ReLU on the hidden
 layer, and also use a separate bias vector for the softmax layer. The function also
 returns a cache with the A and Z values for the hidden and output layers.
@@ -54,27 +54,27 @@ returns a cache with the A and Z values for the hidden and output layers.
           output.txt</b>
 </pre>
 
-1. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
+2. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
 on all the training examples in X, plus an L2 regularization term weighted by the decay hyper-parameter.
 
-2. **Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
+3. **Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
 to compute to softmax outputs.
 
-3. **Predictions:** Compute model predictions in the cost() function.
+4. **Predictions:** Compute model predictions in the cost() function.
 
-4. **Vectorization:** It is important to vectorize your code so that it runs quickly.
+5. **Vectorization:** It is important to vectorize your code so that it runs quickly.
 
-5. **Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
+6. **Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
 
-6. **Numerical gradient:** Once you implemented the cost and the gradient in **nn1Layer.py**,
+7. **Numerical gradient:** Once you implemented the cost and the gradient in **nn1Layer.py**,
 implement code for computing the gradient numerically in **computeNumericalGradient.py**.
 
-7. **Gradient checking:** Use **computeNumericalGradient.py** to make sure that your
+8. **Gradient checking:** Use **computeNumericalGradient.py** to make sure that your
 backward() function is computing gradients correctly. This is done by running the
 main program in Debug mode, i.e. `python3 nn1LayerExercise.py --debug`.
 
-(a) When doing gradient checking on a network that uses ReLU, the numerical gra-
-dient is likely to be very different from the analytical gradient. Explain why.
+(a) When doing gradient checking on a network that uses ReLU, the numerical gradient is likely to be 
+very different from the analytical gradient. Explain why.
 
 (b) Only when doing gradient checking, replace ReLU with an arbitrary activation
 (e.g. sigmoid) that is differentiable.
@@ -130,4 +130,4 @@ second version of the assignment that implements logistic regression for binary 
 
 ## Obtain Results
 The screen output produced when running the code should be redirected to (saved into) the 
-output.txt files.
+**output.txt** files.
