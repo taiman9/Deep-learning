@@ -15,7 +15,7 @@ sion boundaries. Make sure that you organize your code in folders as shown in th
 below. Write code only in the Python files indicated in bold.
 
 ## NumPy Implementation
-1\. **Forward Propagation:** You will need to write code for the forward() function,
+**1\. Forward Propagation:** You will need to write code for the forward() function,
 which computes and returns the softmax outputs in A3. Use ReLU on the hidden
 layer, and also use a separate bias vector for the softmax layer. The function also
 returns a cache with the A and Z values for the hidden and output layers.
@@ -54,29 +54,29 @@ returns a cache with the A and Z values for the hidden and output layers.
           output.txt</b>
 </pre>
 
-2\. **Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
+**2\. Backpropagation:** You will implement this in the backward() function, by minimizing the average loss 
 on all the training examples in X, plus an L2 regularization term weighted by the decay hyper-parameter.
 
-3\. **Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
+**3\. Cost:** Compute the cost (average loss + L2 term) by first running forward propagation
 to compute to softmax outputs.
 
-4\. **Predictions:** Compute model predictions in the cost() function.
+**4\. **Predictions:** Compute model predictions in the cost() function.
 
-5\. **Vectorization:** It is important to vectorize your code so that it runs quickly.
+**5\. Vectorization:** It is important to vectorize your code so that it runs quickly.
 
-6\. **Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
+**6\. Overflow:** Make sure that you prevent overflow when computing the softmax probabilities.
 
-7\. **Numerical gradient:** Once you implemented the cost and the gradient in **nn1Layer.py**,
+**7\. Numerical gradient:** Once you implemented the cost and the gradient in **nn1Layer.py**,
 implement code for computing the gradient numerically in **computeNumericalGradient.py**.
 
-8\. **Gradient checking:** Use **computeNumericalGradient.py** to make sure that your
+**8\. Gradient checking:** Use **computeNumericalGradient.py** to make sure that your
 backward() function is computing gradients correctly. This is done by running the
 main program in Debug mode, i.e. `python3 nn1LayerExercise.py --debug`.
 
-(a) When doing gradient checking on a network that uses ReLU, the numerical gradient is likely to be 
+**(a)** When doing gradient checking on a network that uses ReLU, the numerical gradient is likely to be 
 very different from the analytical gradient. Explain why.
 
-(b) Only when doing gradient checking, replace ReLU with an arbitrary activation
+**(b)** Only when doing gradient checking, replace ReLU with an arbitrary activation
 (e.g. sigmoid) that is differentiable.
 
 The norm of the difference between the numerical gradient and your analytical gradient
