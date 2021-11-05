@@ -98,7 +98,7 @@ strokes.
 
 You will need to write code in **sparseAutoencoder.py**, in functions *get_vars()* and *cost()*:
 
-\1. *get_vars()* should create, initialize, and return variables for the data matrix X and
+/1. *get_vars()* should create, initialize, and return variables for the data matrix X and
 
 the parameters W<sub>1</sub>, b<sub>1</sub> for the hidden layer, and W<sub>2</sub>, b<sub>2</sub> for the output layer. The bias
 
@@ -110,7 +110,7 @@ weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub
 
 and fan<sub>out</sub> is the number  of output units in the weight tensor.
 
-\2. *cost()* should compute and return the cost of the sparse autoencoder on the input
+/2. *cost()* should compute and return the cost of the sparse autoencoder on the input
 
 data matrix X, by running forward propagation to compute the data cost and adding
 
@@ -134,7 +134,7 @@ to understand and complete.
 
 **Step 0:** Load data: The starter code contains code to load 45 2D data points. When
 
-plotted using the scatter function, the results should look like in Figure [2(a)](figure3).
+plotted using the scatter function, the results should look like in Figure [2(a)](images/Figure3.png).
 
 Step 1: Implement PCA: In this step, you will implement PCA to obtain xRot, the
 
