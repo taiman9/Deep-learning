@@ -106,7 +106,7 @@ weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub
 
 , also called Xavier uniform initializer. It draws samples from a uniform distribution within [−limit, limit] where limit is 
 
-$\sqrt{6/(fan<sub>in</sub> + fan<sub>out</sub>}$ where fan<sub>in</sub> is the number of input units in the weight tensor and 
+$$\sqrt{6/(fan<sub>in</sub> + fan<sub>out</sub>}$$ where fan<sub>in</sub> is the number of input units in the weight tensor and 
 
 fan<sub>out</sub> is the number  of output units in the weight tensor.
 
