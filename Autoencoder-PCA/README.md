@@ -106,39 +106,33 @@ weights should be initialized with 0, whereas for W<sub>1</sub> and W<sub>2</sub
 
 , also called Xavier uniform initializer. It draws samples from a uniform distribution within [−limit, limit] where limit is 
 
-<span>&#8730;</span>(6/(fan<sub>in</sub> + fan<sub>out</sub>)) where fan<sub>in</sub> is the number of input units in the weight tensor and 
+<span>&#8730;</span>(6/(fan<sub>in</sub> + fan<sub>out</sub>)) where fan<sub>in</sub> is the number of input units in the weight tensor a
 
-fan<sub>out</sub> is the number  of output units in the weight tensor.
+and fan<sub>out</sub> is the number  of output units in the weight tensor.
 
-\2. cost() should compute and return the cost of the sparse autoencoder on the input
+2. *cost()* should compute and return the cost of the sparse autoencoder on the input
 
 data matrix X, by running forward propagation to compute the data cost and adding
 
 the L2 regularization and KL-divergence sparsity terms.
 
-The code for running gradient descent with minibatches is provided in sparseAutoen-
+The code for running gradient descent with minibatches is provided in **sparseAutoencoderExercise.py.**
 
-coderExercise.py. While you do not need to change this code, it is recommended that you
+While you do not need to change this code, it is recommended that you read it and understand how it works.
 
-read it and understand how it works.
+**2.2.1 Bonus** 
 
-2.2.1 Bonus (25 points)
+Change the code in sparseAutoencoderExercise.py to do batch training with L-BFGS for 400 iterations instead of SGD with Adam.
 
-Change the code in sparseAutoencoderExercise.py to do batch training with L-BFGS for 400
+### 2.3 PCA and Whitening in 2D 
 
-iterations instead of SGD with Adam.
+In this exercise you will implement PCA, PCA whitening and ZCA whitening. 
 
-2.3 PCA and Whitening in 2D (50 points)
+The only ﬁle you need to modify is **pca 2d.py**. Implementing this exercise will make the next exercise signiﬁcantly easier 
 
-Coding eﬀort: my implementation has 9 lines of code.
+to understand and complete.
 
-In this exercise you will implement PCA, PCA whitening and ZCA whitening, as de-
-
-scribed in the Lecture 3. The only ﬁle you need to modify is pca 2d.py. Implementing this
-
-exercise will make the next exercise signiﬁcantly easier to understand and complete.
-
-Step 0: Load data: The starter code contains code to load 45 2D data points. When
+**Step 0:** Load data: The starter code contains code to load 45 2D data points. When
 
 plotted using the scatter function, the results should look like in Figure [2(a)](#br5).
 
@@ -156,7 +150,7 @@ Step 1a: Finding the PCA basis: Find u and u , and draw two lines in your ﬁgur
 
 to show the resulting basis on top of the given data points. Your ﬁgure should look like in
 
-Figure [2(b).](#br5)
+![](images/Figure3.png)
 
 Step 1b: Check xRot: Compute xRot, and use the NumPy scatter() function to check
 
