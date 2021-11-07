@@ -1,0 +1,33 @@
+Epoch 0: cost 0.255797
+Epoch 5000: cost 0.249580
+Epoch 10000: cost 0.246679
+Epoch 15000: cost 0.204900
+Epoch 20000: cost 0.051072
+Epoch 25000: cost 0.012842
+Epoch 30000: cost 0.006568
+Epoch 35000: cost 0.004289
+Epoch 40000: cost 0.003146
+Epoch 45000: cost 0.002469
+Input:	 [0, 0]
+Pred:	 0
+Ouput:	 0
+
+
+Input:	 [0, 1]
+Pred:	 1
+Ouput:	 1
+
+
+Input:	 [1, 0]
+Pred:	 1
+Ouput:	 1
+
+
+Input:	 [1, 1]
+Pred:	 0
+Ouput:	 0
+
+
+
+
+
